@@ -1,25 +1,24 @@
-- What your proposed project is about
-My project related to my M.A. thesis on the analysis and comparison of the three major Japanese newspapers:
-Asahi, Yomiuri and Mainichi. I will be searching for the keyword Yasukuni Shrine (in Japanese) and scraping/analyzing the results. 
-The Yasukuni Shrine has a controversial place in history because it is supposed to house the spirits of the 'war heroes'.
-However, these 'war heroes' are basically considered 'war criminals' in other countries because of Japan's position during World War II. 
-As a result, high level official visits to the shrine as well as protests often end up high profile and much reported. 
-The political slant of a newspaper may also be observed through reports on the shrine as the shrine's history is deeply steeped in Japan's militarism (for or against).
+Project Overview
 
-- The data sources you anticipate accessing
-In order to study news content related to Yasukuni Shrine, I will have to access the online newspaper databases which are readily available.
-Asahi: http://database.asahi.com.ezproxy.stanford.edu/
-Yomiuri: https://database.yomiuri.co.jp/rekishikan/
-Mainichi: https://dbs.g-search.or.jp/aps/WSKR/
+My project will be a brief survey and content analysis of newspaper articles related to the Yasukuni Shrine in Japan. 
+The Yasukuni Shrine is a controversial place in history as it supposedly houses the spirits of the war dead from Japan during World War II. However, this means that many of those 'honored' at the Shrine are considered war criminals by the rest of the world. 
+In recent years, the Shrine has been a place of contention and political tension as Prime Minister Abe Shinzo visited the Shrine to pay respects. This caused protests from China and Korea who consider this an act of disrespect and further hints at Abe's increasing militarism. 
+This is a part of my Master's Thesis, which will analyze newspaper articles covering incidents related to the Yasukuni Shrine. Without using command line programs, I would have to download and analyze the hundreds of articles one by one. However, with command line tools, I can download the articles and analyze them much more efficiently. 
 
-For each of them, I will be accessing news starting from 1986, as that is a cutoff year for the Yomiuri database and is the latest among the three newspapers. 
-Because each database is expansive, I will be accessing only the major editions of the newspapers, and not the regional editions. 
-As the news articles are updated everyday, I will probably set the cut-off date to be March 1, 2015.
+Data Sources
 
-A search with the keyword  shows 9000+ articles from the Asahi database, 4000+ from the Yomiuri database and 7000+ from the Mainichi database as of now. 
-Without the ability to scrape the files automatically and analyze them using a program, the task would be rather insurmountable. 
+There are five major newspapers in Japan: Asahi, Mainichi, Yomiuri, Sankei and Nikkei.
+In a brief preliminary search, the Yomiuri only had one article about Yasukuni in its online edition, so we will not take it into consideration.
+Asahi: http://sitesearch.asahi.com/.cgi/sitesearch/sitesearch.pl?Keywords=%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE&Searchsubmit2=%E6%A4%9C%E7%B4%A2&Searchsubmit=%E6%A4%9C%E7%B4%A2
+Mainichi: http://mainichi.jp/search/index.html?q=%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE&imgsearch=off
+Sankei: http://www.sankei.com/search/?q=%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE
+Nikkei: http://www.sankei.com/search/?q=%E9%9D%96%E5%9B%BD%E7%A5%9E%E7%A4%BE
 
-- The general workings of the program you anticipate writing
-1. Each of the research results have some idiosyncrasies in their layout, so I will have to slightly alter the way I am scraping search results from each of the databases. 
+Since this is a preliminary study of the content of the articles, all available articles on the topic will be scraped. 
+This might result in different time frames, but in general each newspaper archive goes back to about 1~3 years. 
 
-TBA
+General Working of Program
+1. A scraper for each of the databases's search results (because the html layouts for each are drastically different)
+2. A scraper for each of the articles to be downloaded from the search results (also depending on how similar the html layout is)
+3. An analyzer that performs basic analysis (e.g. word count, grep sentence containing search terms, etc) 
+
